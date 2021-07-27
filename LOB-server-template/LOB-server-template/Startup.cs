@@ -1,3 +1,4 @@
+using LOB_server_template.Services.SetupOperationServices;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -32,6 +33,8 @@ namespace LOB_server_template
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "LOB_server_template", Version = "v1" });
             });
+
+            SetupService.SetupProgramServices(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

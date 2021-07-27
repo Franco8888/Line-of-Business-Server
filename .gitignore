@@ -405,5 +405,6 @@ FodyWeavers.xsd
 # Additional files built by Visual Studio
 
 #custom
-yeet/config.ini
+LOB-server-template/LOB-server-template/config.ini
+LOB-server-template/LOB-server-template/web.config
 # End of https://www.toptal.com/developers/gitignore/api/visualstudio,visualstudiocode
