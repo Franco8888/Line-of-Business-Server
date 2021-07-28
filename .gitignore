@@ -404,7 +404,8 @@ FodyWeavers.xsd
 ### VisualStudio Patch ###
 # Additional files built by Visual Studio
 
-#custom
+#custom=======
 LOB-server-template/LOB-server-template/config.ini
-LOB-server-template/LOB-server-template/web.config
+LOB-server-template/LOB-server-template/app.config
 # End of https://www.toptal.com/developers/gitignore/api/visualstudio,visualstudiocode
+

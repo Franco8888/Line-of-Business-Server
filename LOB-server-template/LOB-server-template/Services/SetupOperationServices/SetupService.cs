@@ -11,6 +11,7 @@ namespace LOB_server_template.Services.SetupOperationServices
             services.AddSingleton<IDataBaseService, DatabaseService>();
             services.AddSingleton<ISettingsService, SettingsService>();
             services.AddSingleton<IAdminService, AdminService>();
+            services.AddSingleton<ISalesPersonService, SalesPersonService>();
         }
     }
 }

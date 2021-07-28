@@ -42,7 +42,7 @@ namespace LOB_server_template.Services
 
         public DatabaseService(ISettingsService settings)
         {
-            var client = new MongoClient(settings.MongoDBConnectionString);
+            /*var client = new MongoClient(settings.MongoDBConnectionString);
 
             Database = client.GetDatabase(settings.DataBaseName);
 
@@ -50,7 +50,7 @@ namespace LOB_server_template.Services
             UserAccount = Database.GetCollection<UserAccount>("userAccount");
             AdminCollection = Database.GetCollection<Admin>("admin");
             CustomerCollection = Database.GetCollection<Customer>("customer");
-            ProductCollection = Database.GetCollection<Product>("product");
+            ProductCollection = Database.GetCollection<Product>("product");*/
 
         }
     }

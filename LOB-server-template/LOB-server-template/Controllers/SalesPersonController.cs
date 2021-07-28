@@ -1,7 +1,8 @@
 ﻿using LOB_server_template.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
-using System.Linq;
+using System.Collections.Specialized;
+using System.Configuration;
 using static LOB_server_template.Services.SalesPersonService;
 
 namespace LOB_server_template.Controllers
@@ -17,7 +18,8 @@ namespace LOB_server_template.Controllers
         // CTOR
         // ------------------------------------------------------------------------------------------------------------------------------------------------------------ //
 
-        public SalesPersonController(ISalesPersonService salesPersonService)
+        public SalesPersonController(
+            ISalesPersonService salesPersonService)
         {
             _salesPersonService = salesPersonService;
         }
@@ -60,6 +62,10 @@ namespace LOB_server_template.Controllers
         [HttpPost("customer/addCustomer")]
         public IActionResult AddCustomer([FromBody] DTO_IN_Customer customerData)
         {
+            var yeet = ConfigurationManager.AppSettings["database"];
+
+            System.Console.WriteLine(yeet); 
+
             var result = _salesPersonService.AddCustomer(customerData);
 
             return Ok(result);
