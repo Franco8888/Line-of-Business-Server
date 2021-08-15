@@ -10,16 +10,16 @@ namespace LOB_server_template.Services.SetupOperationServices
 {
     public interface ISettingsService
     {
-        string MongoDBConnectionString { get; }
+        string MongoDBConnectionString { get => ConfigurationManager.AppSettings["DBConnectionString"]; }
 
-        string DataBaseName { get => ConfigurationManager.AppSettings["DataBaseName"]; }
+        string DataBaseName { get => ConfigurationManager.AppSettings["DBName"]; }
     }
 
     public class SettingsService: ISettingsService
     {
         public string MongoDBConnectionString { get => ConfigurationManager.AppSettings["DBConnectionString"]; }
 
-        public string DataBaseName { get => ConfigurationManager.AppSettings["DataBaseName"]; }
+        public string DataBaseName { get => ConfigurationManager.AppSettings["DBName"]; }
 
     }
 }

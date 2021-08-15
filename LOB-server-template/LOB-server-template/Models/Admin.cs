@@ -10,10 +10,10 @@ namespace LOB_server_template.Models
 {
     public class Admin
     {
-        [BsonId]
+        [BsonId]    //in this way we can name our key (_id) something else
         public string AdminReferenceNumber { get; set; }
 
-        [BsonRepresentation(BsonType.ObjectId)]     //reference to UserAccount
+        //[BsonRepresentation(BsonType.ObjectId)]     //reference to UserAccount
         [Required]
         public UserAccount UserAccount { get; set; }
 

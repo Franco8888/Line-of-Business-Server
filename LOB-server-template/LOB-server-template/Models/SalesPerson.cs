@@ -10,10 +10,10 @@ namespace LOB_server_template.Models
 {
     public class SalesPerson
     {
-        [BsonId]    //in this way we can name our key (_id) something else
+        [BsonId]    
         public string SalesPersonReference { get; set; }
 
-        [BsonRepresentation(BsonType.ObjectId)]
+        //[BsonRepresentation(BsonType.ObjectId)]
         [Required]
         public UserAccount UserAccount { get; set; }
 
