@@ -28,13 +28,6 @@ namespace LOB_server_template.Services
 
         private readonly IDataBaseService db;
 
-        // ------------------------------------------------------------------------------------------------------------------------------------------------------------ //
-        // Database collections
-        // ------------------------------------------------------------------------------------------------------------------------------------------------------------ //
-
-        //private readonly IMongoCollection<Customer> customerCollection;
-
-
         public SalesPersonService(
             IDataBaseService databaseService
             )
@@ -51,7 +44,7 @@ namespace LOB_server_template.Services
             }
             catch (Exception e)
             {
-                return new List<Customer>();
+                return null;
             }
         }
 

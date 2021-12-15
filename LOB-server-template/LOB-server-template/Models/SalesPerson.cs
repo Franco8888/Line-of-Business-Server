@@ -10,14 +10,15 @@ namespace LOB_server_template.Models
 {
     public class SalesPerson
     {
-        [BsonId]    
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
         public string SalesPersonReference { get; set; }
 
-        //[BsonRepresentation(BsonType.ObjectId)]
+        [BsonRepresentation(BsonType.ObjectId)]
         [Required]
         public UserAccount UserAccount { get; set; }
 
-        public long SalesLevel { get; set; }
+        public int SalesLevel { get; set; }
 
     }
 }

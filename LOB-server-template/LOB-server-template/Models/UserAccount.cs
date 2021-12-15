@@ -8,9 +8,10 @@ using System.Threading.Tasks;
 
 namespace LOB_server_template.Models
 {
-    public enum LoginAccountType
+    public enum AccountType
     {
         Unverified = 0,
+        User, 
         SalesPerson,
         Admin,
     }
@@ -21,21 +22,29 @@ namespace LOB_server_template.Models
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
 
-        public string UserName { get; set; }
+        public string? UserName { get; set; } = null;
 
         [Required]
-        public string Password { get; set; }
+        public string? Password { get; set; }
+
+        public string? AdminPassword { get; set; } = null;
 
         [Required]
-        public string Email { get; set; }
+        public string? Email { get; set; }
 
         [Required]
-        public string Name { get; set; }    
+        public bool IsEmailVerified { get; set; } = false;
 
         [Required]
-        public string Surname { get; set; }   
+        public string? Name { get; set; }    
 
         [Required]
-        public LoginAccountType AccountType { get; set; }
+        public string? Surname { get; set; }   
+
+        [Required]
+        public AccountType AccountType { get; set; }
+
+        [Required]
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
     }
 }

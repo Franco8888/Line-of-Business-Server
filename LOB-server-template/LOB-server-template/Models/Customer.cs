@@ -15,14 +15,9 @@ namespace LOB_server_template.Models
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
 
+        [BsonRepresentation(BsonType.ObjectId)]
         [Required]
-        public string Email { get; set; }
-
-        [Required]
-        public string Name { get; set; }
-
-        [Required]
-        public string Surname { get; set; }
+        public UserAccount UserAccount { get; set; }
 
         public string TelephoneNumber { get; set; }
 
